@@ -19,6 +19,10 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+    'connect-src': "'self' http://localhost:3000" // Allow data (ajax/websocket) from http://localhost:3000
+  }
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

@@ -1,0 +1,22 @@
+<h2>Customer List</h2>
+
+<table>
+  <th>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Phone</td>
+    </tr>
+  </th>
+  <tbody>
+    {{#each customer in model}}
+    <tr>
+      <td>{{customer.id}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.phone}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{outlet}}
