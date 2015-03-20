@@ -12,7 +12,11 @@
     {{#each customer in model}}
     <tr>
       <td>{{customer.id}}</td>
-      <td>{{customer.name}}</td>
+      <td>
+        {{#link-to 'customer' customer}}
+        {{customer.name}}
+        {{/link-to}}
+      </td>
       <td>{{customer.phone}}</td>
     </tr>
     {{/each}}
